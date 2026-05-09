@@ -218,12 +218,23 @@
 <select id="subjectFilter" onchange="filterSearch()" class="search-box">
     <option value="all">All Subjects</option>
 </select>
-            <input type="text" class="search-box" id="globalSearch" placeholder="Search for topics and subject...." onkeyup="filterSearch()">
+            <input type="text" class="search-box" id="globalSearch" placeholder="Search for subjects..." onkeyup="filterSearch()">
             <div class="grid" id="search-results"></div>
 
         </section>
 
-        
+        <!-- SUBJECT DETAIL PAGE -->
+        <section id="subject-detail" class="page">
+            <div class="subject-header">
+                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i></button>
+                <h2 id="current-subject-name">Subject</h2>
+            </div>
+            <input type="text" class="search-box" id="topicSearch" placeholder="Search topics..." onkeyup="filterTopics()">
+            <div id="topics-list">
+                <!-- Topics will be injected here -->
+            </div>
+        </section>
+
         <!-- EXTRA PAGE: ABOUT -->
         <section id="about" class="page">
             <h2>About Exam Aagadi</h2>
@@ -920,8 +931,16 @@ Created by PSSMILE to support students in achieving better results.
 
 
 
+{ id: 15, name: "ALL SUBJECT", icon: "fa-circle", topics: [
 
 
+{
+    "title": "ALL SUBJECT NOTE",
+    "yt": "Video",
+    "notes": "https://drive.google.com/drive/folders/1xuQMQ8uiSyRkvUOhAAodrSd6sXPqx3sU"
+  }
+
+]},
 
 { id: 5, name: "Biology", icon: "fa-dna", topics: [
 
@@ -1035,7 +1054,7 @@ Created by PSSMILE to support students in achieving better results.
 
 
 
-            { id: 8, name: "Grammar", icon: "fas fa-spell-check", topics: [
+            { id: 8, name: "Grammar", icon: "fa-solid fa-spell-check", topics: [
                 { title: " ||Unit 1", yt: "Video", notes: "Note" },
                 { title: " ||Unit 2", yt: "Video", notes: "Note" },
                 { title: " ||Unit 3", yt: "Video", notes: "Note" },
@@ -1649,7 +1668,25 @@ function filterSearch() {
 }
 
         // SEARCH FUNCTIONALITY
+function filterSubjects() {
+    const query = document.getElementById('globalSearch').value.toLowerCase();
 
+    let results = [];
+
+    studyData.forEach(subject => {
+        subject.topics.forEach(topic => {
+            if (topic.title.toLowerCase().includes(query)) {
+                results.push({
+                    subjectName: subject.name,
+                    subjectId: subject.id,
+                    topic: topic
+                });
+            }
+        });
+    });
+
+    renderSearchResults(results);
+}
 
 function renderSearchResults(results) {
     searchGrid.innerHTML = '';
