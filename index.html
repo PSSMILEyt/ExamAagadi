@@ -149,6 +149,24 @@
 
         /* Utils */
         .hidden { display: none; }
+
+
+
+
+
+
+.btn-disabled {
+    background: #ccc !important;
+    color: #666 !important;
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -197,22 +215,15 @@
 
         <!-- SEARCH PAGE -->
         <section id="search-page" class="page">
-            <input type="text" class="search-box" id="globalSearch" placeholder="Search for subjects..." onkeyup="filterSubjects()">
+<select id="subjectFilter" onchange="filterSearch()" class="search-box">
+    <option value="all">All Subjects</option>
+</select>
+            <input type="text" class="search-box" id="globalSearch" placeholder="Search for topics and subject...." onkeyup="filterSearch()">
             <div class="grid" id="search-results"></div>
+
         </section>
 
-        <!-- SUBJECT DETAIL PAGE -->
-        <section id="subject-detail" class="page">
-            <div class="subject-header">
-                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i></button>
-                <h2 id="current-subject-name">Subject</h2>
-            </div>
-            <input type="text" class="search-box" id="topicSearch" placeholder="Search topics..." onkeyup="filterTopics()">
-            <div id="topics-list">
-                <!-- Topics will be injected here -->
-            </div>
-        </section>
-
+        
         <!-- EXTRA PAGE: ABOUT -->
         <section id="about" class="page">
             <h2>About Exam Aagadi</h2>
@@ -909,16 +920,8 @@ Created by PSSMILE to support students in achieving better results.
 
 
 
-{ id: 4, name: "ALL SUBJECT", icon: "fa-circle", topics: [
 
 
-{
-    "title": "ALL SUBJECT NOTE",
-    "yt": "Video",
-    "notes": "https://drive.google.com/drive/folders/1xuQMQ8uiSyRkvUOhAAodrSd6sXPqx3sU"
-  }
-
-]},
 
 { id: 5, name: "Biology", icon: "fa-dna", topics: [
 
@@ -1032,7 +1035,7 @@ Created by PSSMILE to support students in achieving better results.
 
 
 
-            { id: 8, name: "Grammar", icon: "fa-solid fa-spell-check", topics: [
+            { id: 8, name: "Grammar", icon: "fas fa-spell-check", topics: [
                 { title: " ||Unit 1", yt: "Video", notes: "Note" },
                 { title: " ||Unit 2", yt: "Video", notes: "Note" },
                 { title: " ||Unit 3", yt: "Video", notes: "Note" },
@@ -1530,6 +1533,21 @@ Created by PSSMILE to support students in achieving better results.
 
         ];
 
+function loadSubjectFilter() {
+    const select = document.getElementById("subjectFilter");
+
+    studyData.forEach(sub => {
+        const option = document.createElement("option");
+        option.value = sub.id;
+        option.textContent = sub.name;
+        select.appendChild(option);
+    });
+}
+
+loadSubjectFilter();
+
+
+
         // PAGE NAVIGATION
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1568,29 +1586,97 @@ Created by PSSMILE to support students in achieving better results.
             showPage('subject-detail');
         }
 
-        function renderTopics(topics) {
-            const list = document.getElementById('topics-list');
-            list.innerHTML = topics.length ? '' : '<p style="text-align:center; margin-top:20px;">No topics added yet.</p>';
-            topics.forEach(t => {
-                const div = document.createElement('div');
-                div.className = 'topic-card';
-                div.innerHTML = `
-                    <h4>${t.title}</h4>
-                    <div class="btn-group">
-                        <a href="${t.yt}" target="_blank" class="btn btn-yt"><i class="fab fa-youtube"></i> Video</a>
-                        <a href="${t.notes}" target="_blank" class="btn btn-drive"><i class="fas fa-file-pdf"></i> Notes</a>
-                    </div>
-                `;
-                list.appendChild(div);
-            });
+function renderTopics(topics) {
+    const list = document.getElementById('topics-list');
+    list.innerHTML = '';
+
+    topics.forEach(t => {
+        const div = document.createElement('div');
+        div.className = 'topic-card';
+
+        // VIDEO BUTTON
+        let videoBtn = '';
+        if (t.yt && t.yt !== "Video") {
+            videoBtn = `<a href="${t.yt}" target="_blank" class="btn btn-yt">🎥 Video</a>`;
+        } else {
+            videoBtn = `<span class="btn btn-yt btn-disabled">🎥 Video</span>`;
         }
 
-        // SEARCH FUNCTIONALITY
-        function filterSubjects() {
-            const query = document.getElementById('globalSearch').value.toLowerCase();
-            const filtered = studyData.filter(s => s.name.toLowerCase().includes(query));
-            renderSubjects(filtered, searchGrid);
+        // NOTES BUTTON (optional same logic)
+        let notesBtn = '';
+        if (t.notes && t.notes !== "Note") {
+            notesBtn = `<a href="${t.notes}" target="_blank" class="btn btn-drive">📄 Notes</a>`;
+        } else {
+            notesBtn = `<span class="btn btn-drive btn-disabled">📄 Notes</span>`;
         }
+
+        div.innerHTML = `
+            <h4>${t.title}</h4>
+            <div class="btn-group">
+                ${videoBtn}
+                ${notesBtn}
+            </div>
+        `;
+
+        list.appendChild(div);
+    });
+
+        }
+
+function filterSearch() {
+    const query = document.getElementById('globalSearch').value.toLowerCase();
+    const selected = document.getElementById('subjectFilter').value;
+
+    let results = [];
+
+    studyData.forEach(subject => {
+
+        // if not "all", only search selected subject
+        if (selected !== "all" && subject.id != selected) return;
+
+        subject.topics.forEach(topic => {
+            if (topic.title.toLowerCase().includes(query)) {
+                results.push({
+                    subjectName: subject.name,
+                    subjectId: subject.id,
+                    topic: topic
+                });
+            }
+        });
+    });
+
+    renderSearchResults(results);
+}
+
+        // SEARCH FUNCTIONALITY
+
+
+function renderSearchResults(results) {
+    searchGrid.innerHTML = '';
+
+    if (!results.length) {
+        searchGrid.innerHTML = `<p style="text-align:center;">No results found</p>`;
+        return;
+    }
+
+    results.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        card.innerHTML = `
+            <i class="fas fa-book"></i>
+            <h3>${item.topic.title}</h3>
+            <p style="font-size:0.7rem; color:#666;">
+                📘 ${item.subjectName}
+            </p>
+        `;
+
+        card.onclick = () => openSubject(item.subjectId);
+
+        searchGrid.appendChild(card);
+    });
+}
+
 
         function filterTopics() {
             const query = document.getElementById('topicSearch').value.toLowerCase();
