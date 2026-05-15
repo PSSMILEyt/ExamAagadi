@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Exam Aagadi, PSSMILE, SEE preparation, Class 10 Nepal, SEE 2083, SEE 2026, SEE 2027, Class 10 notes, Class 10 science, Class 10 English, Class 10 math, Nepali notes, Social Studies notes, Computer science notes, SEE exam preparation, all subjects notes Nepal, SEE exercises, SEE solutions, video explanation class 10, revision notes SEE, Exam Aagadi Nepal, free education Nepal, student learning app, online study hub, SEE guide Nepal, class 10 revision, school notes Nepal">
-   <meta name="description" content="Exam Aagadi by PSSMILE is a complete free learning platform for SEE Preparation and Class 10 students in Nepal. Get all subjects including Science, English, Math, Nepali, Social Studies, Computer Science, and more with well-organized notes, exercises, solutions, video explanations, and revision materials. This app is designed for SEE 2083, 2026, and 2027 exam preparation with easy and structured learning. Students can access chapter-wise notes, important questions, step-by-step explanations, and video tutorials anytime on mobile or web. Exam Aagadi helps students revise faster, understand concepts clearly, and improve exam performance with a simple and user-friendly design.">
+    <title>Exam Aagadi SEE Guide Nepal | All Subjects Class 10 Notes & Solutions (Free) (2026–2027)</title>
 
-    <title>Exam Aagadi by PSSMILE | SEE Class 10 Preparation | Science, English, Math, Nepali, Social Studies, Computer Notes, Exercises, Revision | 2083, 2026, 2027 | Nepal | | Student Learning App</title>
+<meta name="description" content="Exam Aagadi is the official free learning platform by PSSMILE for SEE Class 10 students in Nepal. Get complete notes, solutions, exercises, and video explanations for Science, Math, English, Nepali, Social Studies, and Computer for 2026–2027 exams.">
+
+<meta name="keywords" content="SEE Class 10 Nepal, Exam Aagadi, PSSMILE, Class 10 notes Nepal, SEE 2083 preparation, SEE 2026 2027, Science Math English Nepali notes, SEE exam guide Nepal, free study hub Nepal">
+
+<meta name="author" content="PSSMILE">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:title" content="Exam Aagadi | SEE Class 10 Notes Nepal (Official)">
+<meta property="og:description" content="Free SEE Class 10 notes, solutions, and video explanations for all subjects in Nepal (2026–2027).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pssmileofficial.github.io/PSSMILEofficial/">
+<meta property="og:image" content="https://pssmileofficial.github.io/PSSMILEofficial/thumbnail.jpg">
+
+
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
@@ -14,156 +27,344 @@
     
     <style>
         :root {
-            --primary-blue: #007bff;
-            --dark-blue: #0056b3;
-            --bg-light: #f4f7f6;
-            --white: #ffffff;
-            --text-main: #333;
-            --shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+    --primary-blue: #007bff;
+    --dark-blue: #0056b3;
+    --accent: #00c6ff;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    --text-main: #2b2b2b;
+    --shadow: 0 10px 25px rgba(0,0,0,0.12);
+    --soft-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    --radius: 16px;
+}
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        body { background-color: var(--bg-light); color: var(--text-main); padding-bottom: 70px; }
+body {
+    background: linear-gradient(180deg, #f4f7f6, #eef3f8);
+    color: var(--text-main);
+    padding-bottom: 90px;
+}
 
-        /* Navigation Bar */
-        nav {
-            background: var(--primary-blue);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow);
-        }
+/* NAVBAR (glass effect upgrade) */
+nav {
+    background: rgba(0, 123, 255, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+    animation: slideDown 0.4s ease;
+}
 
-        .container { padding: 20px; max-width: 800px; margin: auto; }
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 
-        /* Card Layout */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
+/* CONTAINER */
+.container {
+    padding: 20px;
+    max-width: 850px;
+    margin: auto;
+}
 
-        .card {
-            background: var(--white);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
 
-        .card:active { transform: scale(0.95); }
+/* CARD (modern floating UI) */
+.card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    padding: 22px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--soft-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-        .card i { font-size: 2rem; color: var(--primary-blue); margin-bottom: 10px; }
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(0,123,255,0.1), transparent);
+    transition: 0.5s;
+}
 
-        .card h3 { font-size: 0.9rem; font-weight: 600; }
+.card:hover::before {
+    left: 100%;
+}
 
-        /* Search Bar Styles */
-        .search-box {
-            width: 100%;
-            padding: 15px;
-            border-radius: 25px;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-            font-size: 1rem;
-            outline: none;
-        }
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
 
-        /* Subject Page Styles */
-        .subject-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+.card:active {
+    transform: scale(0.96);
+}
 
-        .back-btn {
-            background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--primary-blue);
-        }
+.card i {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
 
-        .topic-card {
-            background: white;
-            margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 12px;
-            border-left: 5px solid var(--primary-blue);
-        }
+.card:hover i {
+    transform: scale(1.15);
+}
 
-        .btn-group { display: flex; gap: 10px; margin-top: 10px; }
+.card h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
-        .btn {
-            flex: 1;
-            padding: 8px;
-            border-radius: 5px;
-            text-decoration: none;
-            text-align: center;
-            font-size: 0.8rem;
-            font-weight: bold;
-            color: white;
-        }
+/* SEARCH BOX (premium focus style) */
+.search-box {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--soft-shadow);
+}
 
-        .btn-yt { background: #ff0000; }
-        .btn-drive { background: #34a853; }
+.search-box:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(0,123,255,0.15);
+}
 
-        /* Floating Button */
-        .fab {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            background: var(--dark-blue);
-            color: white;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            text-decoration: none;
-            z-index: 999;
-        }
+/* SUBJECT HEADER */
+.subject-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
 
-        /* Bottom Tab Bar */
-        .tab-bar {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        }
+/* BACK BUTTON */
+.back-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--primary-blue);
+    transition: transform 0.2s ease;
+}
 
-        .tab-item { text-align: center; color: #777; font-size: 0.7rem; cursor: pointer; flex: 1; }
-        .tab-item.active { color: var(--primary-blue); }
-        .tab-item i { font-size: 1.2rem; display: block; }
+.back-btn:hover {
+    transform: translateX(-3px);
+}
 
-        .page { display: none; }
-        .page.active { display: block; }
+/* TOPIC CARD */
+.topic-card {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    margin-bottom: 15px;
+    padding: 16px;
+    border-radius: 14px;
+    border-left: 5px solid var(--primary-blue);
+    box-shadow: var(--soft-shadow);
+    transition: 0.3s ease;
+}
 
-        /* Utils */
-        .hidden { display: none; }
+.topic-card:hover {
+    transform: translateY(-3px);
+}
 
+/* BUTTON GROUP */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
 
+/* BASE BUTTON */
+.btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    transition: all 0.25s ease;
+    box-shadow: var(--soft-shadow);
+    position: relative;
+    overflow: hidden;
+}
 
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transition: 0.4s;
+}
 
+.btn:hover::after {
+    left: 100%;
+}
 
+.btn:hover {
+    transform: translateY(-3px);
+}
 
+.btn:active {
+    transform: scale(0.96);
+}
+
+/* BUTTON COLORS */
+.btn-yt {
+    background: linear-gradient(135deg, #ff0000, #b30000);
+}
+
+.btn-drive {
+    background: linear-gradient(135deg, #34a853, #1e7d32);
+}
+
+/* FLOATING ACTION BUTTON */
+.fab {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    text-decoration: none;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.fab:hover {
+    transform: scale(1.12) rotate(8deg);
+}
+
+.fab:active {
+    transform: scale(0.95);
+}
+
+/* DOWNLOAD BUTTON */
+.download-fab {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent));
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.download-fab:hover {
+    transform: scale(1.08);
+}
+
+/* BOTTOM TAB BAR (modern floating style) */
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.tab-item {
+    text-align: center;
+    color: #777;
+    font-size: 0.7rem;
+    cursor: pointer;
+    flex: 1;
+    transition: 0.3s;
+}
+
+.tab-item i {
+    font-size: 1.3rem;
+    display: block;
+}
+
+.tab-item:hover {
+    transform: translateY(-2px);
+}
+
+.tab-item.active {
+    color: var(--primary-blue);
+}
+
+/* PAGE SWITCH */
+.page {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* DISABLED BUTTON */
 .btn-disabled {
     background: #ccc !important;
     color: #666 !important;
     pointer-events: none;
-    cursor: not-allowed;
     opacity: 0.7;
+    filter: grayscale(0.5);
 }
 
-
+/* SMALL UTILITY */
+.hidden {
+    display: none;
+}
 
 
 
@@ -306,9 +507,9 @@ Created by PSSMILE to support students in achieving better results.
 
 
             <div class="topic-card">
-                <h3>Official Note </h3>
+                <h3>Official Note Site</h3>
                 <p>Access our archived resources here.</p>
-                <a href="https://drive.google.com/drive/folders/1xuQMQ8uiSyRkvUOhAAodrSd6sXPqx3sU" target="_blank" class="btn btn-drive" style="display:inline-block; margin-top:10px;">Visit Site</a>
+                <a href="https://sites.google.com/view/pssmileteacher/home" target="_blank" class="btn btn-drive" style="display:inline-block; margin-top:10px;">Visit Site</a>
             </div>
 
 
@@ -368,6 +569,11 @@ Created by PSSMILE to support students in achieving better results.
     </a>
 
 
+<a href="Exam Aagadi.apk" class="download-fab" target="_blank">
+    <i class="fas fa-download"></i> App
+</a>
+
+
 
 
 
@@ -423,10 +629,10 @@ Created by PSSMILE to support students in achieving better results.
             { id: 1, name: "English", icon: "fa-book", topics: [
 
 { title: "Unit 1 Chapter 1", yt: "https://youtu.be/lrez3INLrk4?si=YSPkuMmTX8qDIBS0", notes: "https://drive.google.com/drive/folders/11SBB-E2_zFOcWsR8P-yBnaVwbjmjYOgf" },
-{ title: "Unit 1 Chapter 2", yt: "Video", notes: "https://drive.google.com/drive/folders/1j-6JoDLRpNmKnCCB_3Vnob_ihgGhWxyx" },
+{ title: "Unit 1 Chapter 2", yt: "https://youtu.be/QVKDzj8rbkU?si=eEhfqjrpJAiI45M6", notes: "https://drive.google.com/drive/folders/1j-6JoDLRpNmKnCCB_3Vnob_ihgGhWxyx" },
 
-{ title: "Unit 2 Chapter 1", yt: "Video", notes: "https://drive.google.com/drive/folders/1RZJREJvfy7H9E-UYkgXfioRprqTdkn9-" },
-{ title: "Unit 2 Chapter 2", yt: "Video", notes: "https://drive.google.com/drive/folders/1StoorYIWYaxGqqy9Ac04RTnrzHd_88lG" },
+{ title: "Unit 2 Chapter 1", yt: "https://youtu.be/IH2VCt8ZHWE?si=K6LEv95RRi27FCYk", notes: "https://drive.google.com/drive/folders/1RZJREJvfy7H9E-UYkgXfioRprqTdkn9-" },
+{ title: "Unit 2 Chapter 2", yt: "https://youtu.be/QkteVA0wNJs?si=yNvwaXz2S7Irsfhh", notes: "https://drive.google.com/drive/folders/1StoorYIWYaxGqqy9Ac04RTnrzHd_88lG" },
 
 { title: "Unit 3 Chapter 1", yt: "Video", notes: "https://drive.google.com/drive/folders/1oAtRhOV9qf8mB8-oZ2AxVRCW2v0CXSGZ" },
 { title: "Unit 3 Chapter 2", yt: "Video", notes: "https://drive.google.com/drive/folders/1fSJRS5DFUzjdtBToHq2zv8nOSM9077b2" },
@@ -945,11 +1151,11 @@ Created by PSSMILE to support students in achieving better results.
 
 
 
-{ id: 15, name: "ALL SUBJECT NOTE", icon: "fa-circle", topics: [
+{ id: 15, name: "ALL SUBJECT", icon: "fa-circle", topics: [
 
 
 {
-    "title": "ALL SUBJECT NOTE",
+    "title": "ALL NOTE LINK",
     "yt": "Video",
     "notes": "https://drive.google.com/drive/folders/1xuQMQ8uiSyRkvUOhAAodrSd6sXPqx3sU"
   }
@@ -1464,19 +1670,20 @@ Created by PSSMILE to support students in achieving better results.
 
 
 
-            { id: 10, name: "Optional math", icon: "fas fa-square-root-alt", topics: [
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" },
-                { title: "Title", yt: "Video", notes: "Note" }
-            ]},
+            { id: 10, name: "Optional math", icon: "fas fa-square-root-alt", topics:[
+  { title: "Unit 1 - Relation and Functions", yt: "Video", notes: "https://drive.google.com/drive/folders/10t3y8HGRpgRifbshBGgRJH-HvozV7Tk-" },
+  { title: "Unit 2 - Polynomials", yt: "Video", notes: "https://drive.google.com/drive/folders/1kVix-x64U4ma7hWdfZPjoaZnIfeXqvyt" },
+  { title: "Unit 3 - Linear Programming", yt: "Video", notes: "https://drive.google.com/drive/folders/1uKV5AImmA3z3ajK08ufgsMxqNCKBMTMB" },
+  { title: "Unit 4 - Graph of Quadratic Function", yt: "Video", notes: "https://drive.google.com/drive/folders/1xEoY_RBDToksPcxUt_idoHY25yxCmSti" },
+  { title: "Unit 5 - Charts", yt: "Video", notes: "https://drive.google.com/drive/folders/137iXZiWi-8vIAvy0AjBgtvFPIfB00MPU" },
+  { title: "Unit 6 - Matrix and Determinant", yt: "Video", notes: "https://drive.google.com/drive/folders/1M0rEFvzzIQfZMA6I-lFms6npiJAhQ88L" },
+  { title: "Unit 7 - Trigonometry", yt: "Video", notes: "https://drive.google.com/drive/folders/11nCfq1UtR9ErUqlMk_bmav7Klow-VKMv" },
+  { title: "Unit 8 - Coordinate Geometry", yt: "Video", notes: "https://drive.google.com/drive/folders/1Cxwq7JNKjQfQDJu12c6U_aE1BrQYTQsn" },
+  { title: "Unit 9 - Transformations", yt: "Video", notes: "https://drive.google.com/drive/folders/1LC-6dP3HLRfkIQFF8X-PCg5zNfHMH2IQ" },
+  { title: "Unit 10 - Vectors", yt: "Video", notes: "https://drive.google.com/drive/folders/1b-0oGQUy9DwYDKh0X2mclyeLMwj4guCk" },
+  { title: "Unit 11 - Statics", yt: "Video", notes: "https://drive.google.com/drive/folders/1c0CLKSbKOTJaBarkH3Fiw6LkDablZ032" },
+  { title: "Unit 12 - Limit and Continuity", yt: "Video", notes: "https://drive.google.com/drive/folders/1V6Bw7BPdjoadqLw0t_Xqd1LnfpsfzUsw" }
+] },
 
 
 
@@ -1757,5 +1964,27 @@ function openTopicFromSearch(subjectId, topicTitle) {
             renderTopics(filtered);
         }
     </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Exam Aagadi by PSSMILE",
+  "url": "https://pssmileofficial.github.io/PSSMILEofficial/",
+  "logo": "https://pssmileofficial.github.io/PSSMILEofficial/logo.png",
+  "sameAs": [
+    "https://www.youtube.com/@pssmile.teacher",
+    "https://www.youtube.com/@PSSMILE_officials",
+    "https://www.youtube.com/@PSSMILEcreator"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+977-9764805164",
+    "contactType": "customer support",
+    "email": "sulovecreation123@gmail.com",
+    "areaServed": "NP",
+    "availableLanguage": ["en", "ne"]
+  }
+}
+</script>
 </body>
 </html>
