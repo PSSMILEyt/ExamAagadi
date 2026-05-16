@@ -2,31 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exam Aagadi SEE Guide Nepal | All Subjects Class 10 Notes & Solutions (Free) (2026–2027)</title>
 
-<meta name="description" content="Exam Aagadi is the official free learning platform by PSSMILE for SEE Class 10 students in Nepal. Get complete notes, solutions, exercises, and video explanations for Science, Math, English, Nepali, Social Studies, and Computer for 2026–2027 exams.">
+    <title>
+        Exam Aagadi SEE Guide Nepal | All Subjects Class 10 Notes & Solutions (Free) (2026–2027)
+    </title>
 
-<meta name="keywords" content="SEE Class 10 Nepal, Exam Aagadi, PSSMILE, Class 10 notes Nepal, SEE 2083 preparation, SEE 2026 2027, Science Math English Nepali notes, SEE exam guide Nepal, free study hub Nepal">
+    <meta name="description" content="Exam Aagadi is the official free learning platform by PSSMILE for SEE Class 10 students in Nepal. Get complete notes, solutions, exercises, and video explanations for Science, Math, English, Nepali, Social Studies, and Computer for 2026–2027 exams.">
 
-<meta name="author" content="PSSMILE">
+    <meta name="keywords" content="SEE Class 10 Nepal, Exam Aagadi, PSSMILE, Class 10 notes Nepal, SEE 2083 preparation, SEE 2026 2027, Science Math English Nepali notes, SEE exam guide Nepal, free study hub Nepal">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="PSSMILE">
 
-<meta property="og:title" content="Exam Aagadi | SEE Class 10 Notes Nepal (Official)">
-<meta property="og:description" content="Free SEE Class 10 notes, solutions, and video explanations for all subjects in Nepal (2026–2027).">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pssmileofficial.github.io/PSSMILEofficial/">
-<meta property="og:image" content="https://pssmileofficial.github.io/PSSMILEofficial/thumbnail.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:title" content="Exam Aagadi | SEE Class 10 Notes Nepal (Official)">
 
+    <meta property="og:description" content="Free SEE Class 10 notes, solutions, and video explanations for all subjects in Nepal (2026–2027).">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://pssmileofficial.github.io/PSSMILEofficial/">
+
+    <meta property="og:image" content="https://pssmileofficial.github.io/PSSMILEofficial/thumbnail.jpg">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
-        :root {
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
     --primary-blue: #007bff;
     --dark-blue: #0056b3;
     --accent: #00c6ff;
@@ -43,32 +54,77 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
-    background: linear-gradient(180deg, #f4f7f6, #eef3f8);
+    overflow-x: hidden;
     color: var(--text-main);
     padding-bottom: 90px;
+    background: linear-gradient(-45deg, #f4f7f6, #eef3f8, #f0f9ff, #e0f2fe);
+    background-size: 400% 400%;
+    animation: gradientBG 14s ease infinite;
 }
 
-/* NAVBAR (glass effect upgrade) */
+/* ANIMATIONS */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* NAVBAR */
 nav {
-    background: rgba(0, 123, 255, 0.9);
-    backdrop-filter: blur(10px);
+    background: rgba(0,123,255,0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     color: white;
     padding: 1rem;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
     box-shadow: var(--shadow);
-    animation: slideDown 0.4s ease;
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    animation: slideDown 0.5s ease;
 }
 
 /* CONTAINER */
@@ -85,18 +141,30 @@ nav {
     gap: 16px;
 }
 
-/* CARD (modern floating UI) */
+/* PERFORMANCE */
+.card,
+.btn,
+.fab,
+.topic-card {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     padding: 22px;
     border-radius: var(--radius);
     text-align: center;
     box-shadow: var(--soft-shadow);
     cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    animation: cardReveal 0.5s ease forwards;
+    transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
 }
 
 .card::before {
@@ -106,8 +174,13 @@ nav {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(0,123,255,0.1), transparent);
-    transition: 0.5s;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,123,255,0.15),
+        transparent
+    );
+    transition: 0.6s;
 }
 
 .card:hover::before {
@@ -115,12 +188,14 @@ nav {
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 18px 35px rgba(0,123,255,0.15),
+        0 8px 18px rgba(0,0,0,0.08);
 }
 
 .card:active {
-    transform: scale(0.96);
+    transform: scale(0.95);
 }
 
 .card i {
@@ -139,7 +214,7 @@ nav {
     font-weight: 600;
 }
 
-/* SEARCH BOX (premium focus style) */
+/* SEARCH */
 .search-box {
     width: 100%;
     padding: 14px 18px;
@@ -148,8 +223,8 @@ nav {
     margin-bottom: 20px;
     font-size: 1rem;
     outline: none;
-    transition: all 0.3s ease;
     box-shadow: var(--soft-shadow);
+    transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
 }
 
 .search-box:focus {
@@ -172,27 +247,28 @@ nav {
     font-size: 1.6rem;
     cursor: pointer;
     color: var(--primary-blue);
-    transition: transform 0.2s ease;
+    transition: 0.25s ease;
 }
 
 .back-btn:hover {
-    transform: translateX(-3px);
+    transform: translateX(-4px);
 }
 
 /* TOPIC CARD */
 .topic-card {
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(10px);
-    margin-bottom: 15px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(18px);
     padding: 16px;
+    margin-bottom: 15px;
     border-radius: 14px;
     border-left: 5px solid var(--primary-blue);
     box-shadow: var(--soft-shadow);
-    transition: 0.3s ease;
+    animation: cardReveal 0.5s ease forwards;
+    transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
 }
 
 .topic-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 /* BUTTON GROUP */
@@ -202,7 +278,7 @@ nav {
     margin-top: 12px;
 }
 
-/* BASE BUTTON */
+/* BUTTON */
 .btn {
     flex: 1;
     padding: 10px;
@@ -212,10 +288,10 @@ nav {
     font-size: 0.85rem;
     font-weight: 600;
     color: white;
-    transition: all 0.25s ease;
-    box-shadow: var(--soft-shadow);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--soft-shadow);
+    transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
 }
 
 .btn::after {
@@ -226,7 +302,7 @@ nav {
     width: 100%;
     height: 100%;
     background: rgba(255,255,255,0.2);
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .btn:hover::after {
@@ -238,10 +314,9 @@ nav {
 }
 
 .btn:active {
-    transform: scale(0.96);
+    transform: scale(0.95);
 }
 
-/* BUTTON COLORS */
 .btn-yt {
     background: linear-gradient(135deg, #ff0000, #b30000);
 }
@@ -250,7 +325,7 @@ nav {
     background: linear-gradient(135deg, #34a853, #1e7d32);
 }
 
-/* FLOATING ACTION BUTTON */
+/* FLOATING BUTTON */
 .fab {
     position: fixed;
     bottom: 25px;
@@ -264,10 +339,11 @@ nav {
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     text-decoration: none;
     z-index: 999;
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
 }
 
 .fab:hover {
@@ -280,6 +356,7 @@ nav {
 
 /* DOWNLOAD BUTTON */
 .download-fab {
+animation: float 3s ease-in-out infinite;
     position: fixed;
     bottom: 100px;
     right: 20px;
@@ -291,24 +368,23 @@ nav {
     font-weight: 600;
     text-decoration: none;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    z-index: 1000;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: 0.3s ease;
+    transition: 0.35s;
+
 }
 
-.download-fab:hover {
-    transform: scale(1.08);
-}
 
-/* BOTTOM TAB BAR (modern floating style) */
+
+
+/* TAB BAR */
 .tab-bar {
     position: fixed;
     bottom: 0;
     width: 100%;
     background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(18px);
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
@@ -325,8 +401,8 @@ nav {
 }
 
 .tab-item i {
-    font-size: 1.3rem;
     display: block;
+    font-size: 1.3rem;
 }
 
 .tab-item:hover {
@@ -337,7 +413,7 @@ nav {
     color: var(--primary-blue);
 }
 
-/* PAGE SWITCH */
+/* PAGE */
 .page {
     display: none;
     animation: fadeIn 0.4s ease;
@@ -347,12 +423,7 @@ nav {
     display: block;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* DISABLED BUTTON */
+/* DISABLED */
 .btn-disabled {
     background: #ccc !important;
     color: #666 !important;
@@ -361,9 +432,50 @@ nav {
     filter: grayscale(0.5);
 }
 
-/* SMALL UTILITY */
+/* UTILITY */
 .hidden {
     display: none;
+}
+
+.fab {
+    position: fixed;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 9999;
+}
+
+
+
+/* DOWNLOAD (MIDDLE) */
+.fab-download {
+    bottom: 95px;
+    background: linear-gradient(135deg, #34a853, #1e7d32);
+    flex-direction: column;
+
+}
+
+/* AI (TOP FLOATING) */
+.fab-ai {
+    bottom: 165px;
+    background: linear-gradient(135deg, #0056ff, #00c6ff);
+    flex-direction: column;
+}
+
+.fab-ai i {
+    font-size: 20px;
+}
+
+.fab-ai span {
+    font-size: 9px;
+    margin-top: 2px;
 }
 
 
@@ -376,225 +488,194 @@ nav {
 
     <div class="container">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         <!-- HOME PAGE -->
         <section id="home" class="page active">
             <h2 style="margin-bottom: 15px;">Explore Subjects</h2>
             <div class="grid" id="subjects-grid">
                 <!-- Subject cards will be injected here -->
+
             </div>
         </section>
 
         <!-- SEARCH PAGE -->
-        <!-- SEARCH PAGE -->
-<section id="search-page" class="page">
+        <section id="search-page" class="page">
 
-    <div class="search-header">
-        <h2>Search Topics</h2>
-        <p>Find notes, videos and chapters quickly</p>
-    </div>
+            <div class="search-header">
+                <h2>Search Topics</h2>
+                <p>Find notes, videos and chapters quickly</p>
+            </div>
 
-    <div class="search-box-wrapper">
-        <select id="subjectFilter" onchange="filterSearch()" class="search-box">
-            <option value="all">All Subjects</option>
-        </select>
+            <div class="search-box-wrapper">
+                <select id="subjectFilter" onchange="filterSearch()" class="search-box">
+                    <option value="all">All Subjects</option>
+                </select>
 
-        <input type="text"
-            class="search-box"
-            id="globalSearch"
-            placeholder="Search topics like 'motion', 'unit 1'..."
-            onkeyup="filterSearch()">
-    </div>
+                <input type="text"
+                    class="search-box"
+                    id="globalSearch"
+                    placeholder="Search topics like 'motion', 'unit 1'..."
+                    onkeyup="filterSearch()">
+            </div>
 
-    <div id="search-results" class="search-results"></div>
+            <div id="search-results" class="search-results"></div>
 
-</section>
+        </section>
+
         <!-- SUBJECT DETAIL PAGE -->
         <section id="subject-detail" class="page">
+
             <div class="subject-header">
-                <button class="back-btn" onclick="showPage('home')"><i class="fas fa-arrow-left"></i></button>
+                <button class="back-btn" onclick="showPage('home')">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
                 <h2 id="current-subject-name">Subject</h2>
             </div>
-            <input type="text" class="search-box" id="topicSearch" placeholder="Search topics..." onkeyup="filterTopics()">
+
+            <input type="text"
+                class="search-box"
+                id="topicSearch"
+                placeholder="Search topics..."
+                onkeyup="filterTopics()">
+
             <div id="topics-list">
                 <!-- Topics will be injected here -->
             </div>
+
         </section>
 
-        <!-- EXTRA PAGE: ABOUT -->
+        <!-- ABOUT PAGE -->
         <section id="about" class="page">
+
             <h2>About Exam Aagadi</h2>
+
             <div class="topic-card" style="margin-top:20px;">
+                <p>
+                    👤 About This App<br><br>
 
-<p>
-👤 About This App<br><br>
+                    Exam Aagadi by PSSMILE is a complete learning platform designed specially for SEE and Class 10 students in Nepal. It provides well-organized notes, video explanations, and revision materials to help students understand concepts clearly and prepare effectively for exams.<br><br>
 
-Exam Aagadi by PSSMILE is a complete learning platform designed specially for SEE and Class 10 students in Nepal. It provides well-organized notes, video explanations, and revision materials to help students understand concepts clearly and prepare effectively for exams.<br><br>
+                    📚 What You Get<br>
+                    • Subject-wise structured notes<br>
+                    • Easy video explanations<br>
+                    • Important questions & exercises<br>
+                    • Quick revision materials<br><br>
 
-📚 What You Get<br>
-• Subject-wise structured notes<br>
-• Easy video explanations<br>
-• Important questions & exercises<br>
-• Quick revision materials<br><br>
+                    🎯 Our Mission<br>
+                    To make education simple, free, and accessible for every student in Nepal.<br><br>
 
-🎯 Our Mission<br>
-To make education simple, free, and accessible for every student in Nepal.<br><br>
+                    🎥 YouTube Channel<br>
+                    PSSMILE – Learn with simple and clear explanations.<br><br>
 
-🎥 YouTube Channel<br>
-PSSMILE – Learn with simple and clear explanations.<br><br>
-
-👨‍💻 Creator<br>
-Created by PSSMILE to support students in achieving better results.
-</p>
-
+                    👨‍💻 Creator<br>
+                    Created by PSSMILE to support students in achieving better results.
+                </p>
             </div>
+
         </section>
 
-
-
-
-
-
-
-
-
-        <!-- EXTRA PAGE: WEBSITES -->
+        <!-- WEBSITES PAGE -->
         <section id="websites" class="page">
+
             <h2>Our Resources</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <div class="topic-card">
                 <h3>Official Note Site</h3>
                 <p>Access our archived resources here.</p>
-                <a href="https://sites.google.com/view/pssmileteacher/home" target="_blank" class="btn btn-drive" style="display:inline-block; margin-top:10px;">Visit Site</a>
+                <a href="https://drive.google.com/drive/folders/1xuQMQ8uiSyRkvUOhAAodrSd6sXPqx3sU"
+                   target="_blank"
+                   class="btn btn-drive"
+                   style="display:inline-block; margin-top:10px;">
+                    Visit Site
+                </a>
             </div>
 
-
-<div class="topic-card">
+            <div class="topic-card">
                 <h3>SEE Preparation Class 10 || CHANNEL</h3>
                 <p>Let's Prepare</p>
-                <a href="https://www.youtube.com/@pssmile.teacher" target="_blank" class="btn btn-drive" style="display:inline-block; margin-top:10px;">Visit Site</a>
+                <a href="https://www.youtube.com/@pssmile.teacher"
+                   target="_blank"
+                   class="btn btn-drive"
+                   style="display:inline-block; margin-top:10px;">
+                    Visit Site
+                </a>
             </div>
 
-
-
-<div class="topic-card">
+            <div class="topic-card">
                 <h3>PSSMILE Website</h3>
                 <p>Download my GAME now</p>
-                <a href="https://pssmileofficial.github.io/PSSMILEofficial/" target="_blank" class="btn btn-drive" style="display:inline-block; margin-top:10px;">Visit Site</a>
+                <a href="https://pssmileofficial.github.io/PSSMILEofficial/"
+                   target="_blank"
+                   class="btn btn-drive"
+                   style="display:inline-block; margin-top:10px;">
+                    Visit Site
+                </a>
             </div>
 
-
-<div class="topic-card">
+            <div class="topic-card">
                 <h3>My Gaming channel</h3>
                 <p>Let's play together</p>
-                <a href="https://www.youtube.com/@PSSMILE_officials" target="_blank" class="btn btn-drive" style="display:inline-block; margin-top:10px;">Visit Site</a>
+                <a href="https://www.youtube.com/@PSSMILE_officials"
+                   target="_blank"
+                   class="btn btn-drive"
+                   style="display:inline-block; margin-top:10px;">
+                    Visit Site
+                </a>
             </div>
 
-
-<div class="topic-card">
+            <div class="topic-card">
                 <h3>My Drawing Channel</h3>
                 <p>Be Creative</p>
-                <a href="https://www.youtube.com/@PSSMILEcreator" target="_blank" class="btn btn-drive" style="display:inline-block; margin-top:10px;">Visit Site</a>
+                <a href="https://www.youtube.com/@PSSMILEcreator"
+                   target="_blank"
+                   class="btn btn-drive"
+                   style="display:inline-block; margin-top:10px;">
+                    Visit Site
+                </a>
             </div>
 
         </section>
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Floating Action Button -->
-    <a href="https://pssmileyt.github.io/ExamAagadi/" target="_blank" class="fab">
-        <i class="fas fa-globe"></i>
+    <!-- FLOATING RELOAD BUTTON -->
+    <a href="#" class="fab" onclick="location.reload()">
+        <i class="fas fa-rotate-right"></i>
     </a>
 
-
-<a href="Exam Aagadi.apk" class="download-fab" target="_blank">
-    <i class="fas fa-download"></i> App
+<a href="ai.html" class="fab fab-ai">
+    <i class="fas fa-robot"></i>
+    <span>AI</span>
 </a>
+    
 
+    <!-- DOWNLOAD BUTTON -->
+    <a href="Exam Aagadi.apk" class="download-fab" target="_blank">
+        <i class="fas fa-download"></i> App
+    </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Navigation Tab Bar -->
+    <!-- TAB BAR -->
     <div class="tab-bar">
-        <div class="tab-item active" onclick="showPage('home')"><i class="fas fa-home"></i>Home</div>
-        <div class="tab-item" onclick="showPage('search-page')"><i class="fas fa-search"></i>Search</div>
-        <div class="tab-item" onclick="showPage('about')"><i class="fas fa-info-circle"></i>About</div>
-        <div class="tab-item" onclick="showPage('websites')"><i class="fas fa-link"></i>Websites</div>
+
+        <div class="tab-item active" onclick="showPage('home')">
+            <i class="fas fa-home"></i>Home
+        </div>
+
+        <div class="tab-item" onclick="showPage('search-page')">
+            <i class="fas fa-search"></i>Search
+        </div>
+
+        <div class="tab-item" onclick="showPage('about')">
+            <i class="fas fa-info-circle"></i>About
+        </div>
+
+        <div class="tab-item" onclick="showPage('websites')">
+            <i class="fas fa-link"></i>Websites
+        </div>
+
     </div>
+
+
 
     <script>
         // DATA OBJECT - Manually edit this to add content
