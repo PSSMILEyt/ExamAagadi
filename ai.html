@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Aagadi Study AI - Academic Workspace</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&family=Space+Grotesk:wght=400;500;700&family=Fira+Code:wght=400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sky-blue: #38bdf8;
+            --sky-blue-glow: rgba(56, 189, 248, 0.4);
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #0b1329;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .font-space {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--sky-blue);
+            border-radius: 4px;
+        }
+
+        /* Continuous Complex Idle Floating Physics for Mascot */
+        @keyframes dynamicFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(1.5deg); }
+            50% { transform: translateY(-15px) rotate(-1deg) scaleY(1.02); }
+            75% { transform: translateY(-6px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @keyframes energyPulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(56, 189, 248, 0.4), inset 0 0 10px rgba(56, 189, 248, 0.2); }
+            50% { box-shadow: 0 0 35px rgba(56, 189, 248, 0.8), inset 0 0 20px rgba(56, 189, 248, 0.5); }
+        }
+
+        @keyframes backgroundGrid {
+            0% { background-position: 0 0; }
+            100% { background-position: 40px 40px; }
+        }
+
+        @keyframes cursorBlink {
+            50% { opacity: 0; }
+        }
+
+        .grid-bg {
+            background-image: linear-gradient(rgba(56, 189, 248, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(56, 189, 248, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: backgroundGrid 20s linear infinite;
+        }
+
+        /* Mascot Container Styling */
+        .mascot-container {
+            animation: dynamicFloat 6s infinite ease-in-out;
+            transition: transform 0.1s ease-out;
+        }
+
+        .mascot-core {
+            animation: energyPulse 4s infinite ease-in-out;
+        }
+
+        /* Terminal Typing Cursor */
+        .typing-cursor::after {
+            content: '█';
+            animation: cursorBlink 0.8s infinite;
+            color: var(--sky-blue);
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body class="grid-bg min-h-screen pb-32">
+
+    <!-- Header / Hero Section -->
+    <header class="container mx-auto px-4 pt-12 pb-6 text-center relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-[#38bdf8]/10 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800/60 backdrop-blur-md border border-slate-700/50 rounded-full text-xs font-semibold tracking-wider text-[#38bdf8] uppercase mb-4">
+            <i class="fa-solid fa-graduation-cap"></i> Focused Study Mode Active
+        </div>
+        
+        <h1 class="font-space text-4xl md:text-6xl font-bold tracking-tight text-white mb-4">
+            Exam Aagadi <span class="text-[#38bdf8] drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]">Study AI</span>
+        </h1>
+    </header>
+
+    <!-- LIVE AI GENERATED CHAT PRINTING TERMINAL LAYER -->
+    <section class="max-w-2xl mx-auto px-4 mb-8">
+        <div class="bg-slate-950/80 backdrop-blur-md border border-slate-800 rounded-xl p-4 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center justify-between border-b border-slate-900 pb-2 mb-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/70 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/70 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#38bdf8]/70 inline-block"></span>
+                    <span class="text-[11px] font-mono text-slate-500 ml-2 tracking-tight">SYSTEM_AGENT_STREAM</span>
+                </div>
+                <div class="flex items-center gap-1 text-xs text-[#38bdf8]/80 bg-[#38bdf8]/10 px-2 py-0.5 rounded font-mono">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-ping"></span>
+                    <span>ONLINE</span>
+                </div>
+            </div>
+            
+            <div class="flex items-start gap-3 py-1 font-mono text-sm">
+                <div class="w-6 h-6 rounded-md bg-[#38bdf8]/10 text-[#38bdf8] flex items-center justify-center text-xs shrink-0 mt-0.5 border border-[#38bdf8]/20">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="text-slate-300 leading-relaxed min-h-[24px]">
+                    <span id="aiTerminalOutput" class="typing-cursor">Connecting parameters...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="max-w-md mx-auto mt-6 relative">
+            <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" id="toolSearch" oninput="filterTools()" placeholder="Search academic solvers, translation apps..." 
+                class="w-full pl-12 pr-4 py-3 bg-slate-900/80 border border-slate-700 rounded-xl focus:outline-none focus:border-[#38bdf8] focus:ring-2 focus:ring-[#38bdf8]/20 transition-all text-sm placeholder-slate-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Grid Workspace -->
+    <main class="container mx-auto px-4 md:px-8 mt-4">
+        <div id="toolsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- TOOL 1: ChatGPT -->
+            <a href="https://chatgpt.com" class="tool-card group relative block bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#38bdf8]/50 hover:shadow-[0_10px_30px_rgba(56,189,248,0.15)]" data-name="chatgpt openai homework help learning">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl border border-emerald-500/30">
+                        <i class="fa-solid fa-gpts"></i>
+                    </div>
+                    <span class="text-[10px] uppercase tracking-widest bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded">Conceptual Help</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-white group-hover:text-[#38bdf8] transition-colors">ChatGPT</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Brainstorm essays, break down complex curriculum topics, and generate instant syllabus summaries.</p>
+                <div class="mt-4 flex items-center justify-between text-xs text-[#38bdf8] font-semibold opacity-80 group-hover:opacity-100">
+                    <span>Launch Sandbox</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </a>
+
+            <!-- TOOL 2: Gemini -->
+            <a href="https://gemini.google.com" class="tool-card group relative block bg-slate-900 border-2 border-indigo-500/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 hover:border-indigo-400 hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]" data-name="gemini google bard search research">
+                <div class="absolute -top-3 right-4 bg-indigo-600 text-white text-[9px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full shadow-lg">Multimodal</div>
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 flex items-center justify-center text-white text-xl shadow-inner">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                </div>
+                <h3 class="font-space text-xl font-bold text-indigo-300 group-hover:text-white transition-colors">Google Gemini</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Real-time web tracking, up-to-date research, and excellent mathematical text parsing solutions.</p>
+                <div class="mt-4 flex items-center justify-between text-xs text-indigo-400 font-semibold">
+                    <span>Open Workspace</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <!-- TOOL 3: Claude AI -->
+            <a href="https://claude.ai" class="tool-card group relative block bg-[#fbfaf7] text-slate-900 rounded-none p-6 border-l-4 border-amber-700 transition-all duration-300 hover:scale-[1.02] hover:bg-[#f5f2eb]" data-name="claude anthropic literature reading analysis">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 bg-amber-900 text-amber-100 flex items-center justify-center text-lg font-serif font-bold">
+                        C
+                    </div>
+                    <span class="text-[9px] font-mono tracking-wider border border-amber-800/30 px-1.5 py-0.5 text-amber-800">ADVANCED REASONING</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-slate-900">Claude AI</h3>
+                <p class="text-xs text-slate-700 mt-2 line-clamp-2">Flawless long-form writing analysis, deep reading comprehension guides, and logic troubleshooting.</p>
+                <div class="mt-4 flex items-center justify-between text-xs text-amber-900 font-bold tracking-wider">
+                    <span>ENGAGE SYSTEM</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- TOOL 4: MS Copilot -->
+            <a href="https://copilot.microsoft.com" class="tool-card group relative block bg-slate-950 border border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 overflow-hidden" data-name="copilot microsoft bing academic sources">
+                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl group-hover:bg-cyan-500/20 transition-all"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 bg-slate-900 text-cyan-400 flex items-center justify-center text-xl rounded-xl border border-cyan-500/20 shadow-[inset_0_0_10px_rgba(6,182,212,0.1)]">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <span class="text-[10px] text-slate-500 font-mono">MS-CORE</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">MS Copilot</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Integrated search engine powerhouse featuring precision documentation and resource mining capabilities.</p>
+                <div class="mt-4 text-xs text-cyan-400 flex items-center gap-1 font-mono">
+                    <span>&gt; boot_copilot()</span>
+                </div>
+            </a>
+
+            <!-- TOOL 5: Perplexity -->
+            <a href="https://perplexity.ai" class="tool-card group relative block bg-zinc-900 border border-zinc-800 font-mono rounded-xl p-5 transition-all duration-300 hover:border-teal-500" data-name="perplexity research citations bibliography">
+                <div class="flex justify-between items-center mb-3 border-b border-zinc-800 pb-2">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-green-500 inline-block"></span>
+                    </div>
+                    <span class="text-[10px] text-zinc-500">REF_ENGINE</span>
+                </div>
+                <h3 class="text-lg font-bold text-teal-400">Perplexity</h3>
+                <p class="text-[11px] text-zinc-400 mt-1 line-clamp-2">Instant informational lookup answers backed by clear, cross-verifiable index source citations.</p>
+                <div class="mt-3 text-[11px] text-teal-600 group-hover:text-teal-400 flex items-center justify-between">
+                    <span>[Run Investigation]</span>
+                    <span>ctrl+shft+p</span>
+                </div>
+            </a>
+
+            <!-- TOOL 6: QuillBot -->
+            <a href="https://quillbot.com" class="tool-card group relative block bg-gradient-to-br from-emerald-900/40 to-slate-900 border border-emerald-800/30 rounded-3xl p-6 transition-all duration-300 hover:shadow-[0_8px_25px_rgba(16,185,129,0.15)]" data-name="quillbot paraphrase rewriter dictionary writing">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-xl shadow-lg shadow-emerald-900/40">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                </div>
+                <h3 class="font-space text-xl font-bold text-slate-100">QuillBot</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Paraphrase sentences, change vocabulary difficulty levels, and optimize essay pacing flawlessly.</p>
+                <div class="mt-4 inline-flex items-center gap-2 text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full">
+                    <span>Rewrite Canvas</span> <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+            </a>
+
+            <!-- TOOL 7: Grammarly -->
+            <a href="https://grammarly.com" class="tool-card group relative block bg-white text-slate-900 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-xl border border-slate-100" data-name="grammarly spelling editor punctuation corrections">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white text-lg font-bold">
+                        G
+                    </div>
+                    <span class="text-[10px] font-bold text-green-600 tracking-wide bg-green-50 px-2 py-1 rounded">PROOFREAD</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-slate-800">Grammarly</h3>
+                <p class="text-xs text-slate-600 mt-2 line-clamp-2">Fix spelling typos, correct structurally broken grammar, and polish your formal project phrasing.</p>
+                <div class="mt-4 text-xs font-semibold text-green-700 flex items-center gap-1">
+                    <span>Scan Draft</span><i class="fa-solid fa-check-double"></i>
+                </div>
+            </a>
+
+            <!-- TOOL 8: Photomath -->
+            <a href="https://photomath.com" class="tool-card group relative block bg-orange-500 text-white rounded-2xl p-6 transition-all duration-300 hover:scale-[1.03] shadow-md shadow-orange-500/10" data-name="photomath math camera scanner algebra geometry solutions">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <i class="fa-solid fa-plus-minus opacity-40 text-3xl"></i>
+                </div>
+                <h3 class="font-space text-xl font-bold">Photomath</h3>
+                <p class="text-xs text-orange-100 mt-2 line-clamp-2">Scan tough textbook math operations straight from your camera loop for immediate logical step guides.</p>
+                <div class="mt-4 text-xs font-bold bg-white text-orange-600 inline-block px-3 py-1.5 rounded-lg shadow-sm">
+                    Initialize Scanner
+                </div>
+            </a>
+
+            <!-- TOOL 9: Wolfram Alpha -->
+            <a href="https://www.wolframalpha.com" class="tool-card group relative block bg-gradient-to-br from-red-950 to-slate-900 border border-red-800/40 rounded-2xl p-6 transition-all duration-300 hover:border-red-500" data-name="wolfram alpha calculation chemistry calculus physics matrices">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-11 h-11 bg-red-600 text-white flex items-center justify-center text-xl rounded-lg rotate-45">
+                        <i class="fa-solid fa-square-root-variable -rotate-45"></i>
+                    </div>
+                    <span class="text-[10px] text-red-400 font-mono tracking-widest">EXACT MATH</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-red-200">Wolfram Alpha</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Compute rigorous calculus, evaluate chemical molecular formulas, and cross-examine complex physics datasets.</p>
+                <div class="mt-4 text-xs text-red-400 font-semibold flex items-center gap-1">
+                    <span>Compute Dataset</span> <i class="fa-solid fa-microchip"></i>
+                </div>
+            </a>
+
+            <!-- TOOL 10: Notion AI -->
+            <a href="https://notion.so" class="tool-card group relative block bg-[#191919] border border-zinc-800 rounded-xl p-6 transition-all duration-300 hover:bg-zinc-900" data-name="notion ai notes organization study planner checklists">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 bg-white text-black flex items-center justify-center text-xl font-black rounded-lg">
+                        N
+                    </div>
+                    <span class="text-[10px] text-zinc-500 font-mono">WORKSPACE</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-white">Notion AI</h3>
+                <p class="text-xs text-zinc-400 mt-2 line-clamp-2">Organize chaotic lecture points, map dynamic mock exam tracking lists, and format summaries.</p>
+                <div class="mt-4 text-xs text-white/60 group-hover:text-white flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span> Open Notebook
+                </div>
+            </a>
+
+            <!-- TOOL 11: Blackbox AI -->
+            <a href="https://www.blackbox.ai" class="tool-card group relative block bg-black border border-green-500/20 rounded-xl p-6 transition-all duration-300 hover:border-green-500 hover:shadow-[0_0_15px_rgba(34,197,94,0.2)]" data-name="blackbox ai coding programming compiler javascript python coding helper">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="font-mono text-green-500 text-sm tracking-tighter">&lt;B_BOX&gt;</div>
+                    <i class="fa-solid fa-code text-green-500/40 text-xl"></i>
+                </div>
+                <h3 class="font-mono text-lg font-bold text-white">Blackbox AI</h3>
+                <p class="font-mono text-[11px] text-zinc-400 mt-2 line-clamp-2">Lightning-fast computer code autocomplete syntax generators and reliable code logic tracking tools.</p>
+                <div class="mt-4 font-mono text-[11px] text-green-400">
+                    $ execute_tool_call
+                </div>
+            </a>
+
+            <!-- TOOL 12: Hugging Face -->
+            <a href="https://huggingface.co" class="tool-card group relative block bg-amber-950/20 border border-amber-500/20 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-2 hover:border-amber-400" data-name="huggingface models data open source computer science algorithms">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="text-3xl">🤗</span>
+                    <span class="text-[10px] text-amber-400/80 bg-amber-400/10 px-2 py-0.5 rounded">Repository</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-amber-200">Hugging Face</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Access open-source academic datasets, vocabulary datasets, and neural networks for technical learning.</p>
+                <div class="mt-4 text-xs text-amber-400 font-semibold">
+                    Browse Models &rarr;
+                </div>
+            </a>
+
+            <!-- TOOL 13: Brainly -->
+            <a href="https://brainly.com" class="tool-card group relative block bg-slate-900 border border-sky-400/20 rounded-2xl p-6 transition-all duration-300 hover:bg-slate-850" data-name="brainly community peer homework assignment checker questions">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 bg-sky-400 text-slate-950 flex items-center justify-center text-xl rounded-full font-black shadow-md">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <span class="text-[10px] bg-slate-800 text-sky-400 px-2 py-1 rounded-full font-bold">PEER NETWORK</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-white">Brainly</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Crowdsourced learning ecosystem tailored to parsing step-by-step textbook answer tracks with peers.</p>
+                <div class="mt-4 text-xs text-sky-400 font-bold group-hover:underline">
+                    Ask Community Qs
+                </div>
+            </a>
+
+            <!-- TOOL 14: Chegg Study -->
+            <a href="https://chegg.com" class="tool-card group relative block bg-amber-500 text-slate-950 rounded-xl p-6 font-semibold transition-all duration-300 hover:skew-y-1" data-name="chegg study textbooks solutions manuals references">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 bg-slate-950 text-amber-400 flex items-center justify-center text-xl rounded-md">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                    </div>
+                </div>
+                <h3 class="font-space text-xl font-black tracking-tight text-slate-950">Chegg Study</h3>
+                <p class="text-xs text-slate-900 font-normal mt-2 line-clamp-2">Access detailed textbook evaluation breakdowns, expert-verified chapters, and subject track metrics.</p>
+                <div class="mt-4 text-xs uppercase tracking-wider font-bold underline">
+                    Find Textbooks
+                </div>
+            </a>
+
+            <!-- TOOL 15: StudyX -->
+            <a href="https://studyx.ai" class="tool-card group relative block bg-slate-900/60 border border-violet-500/30 rounded-2xl p-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(139,92,246,0.25)]" data-name="studyx homework solver companion tasks tests">
+                <div class="absolute inset-0 bg-gradient-to-tr from-violet-600/5 to-cyan-500/5 rounded-2xl pointer-events-none"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-11 h-11 rounded-xl bg-violet-600 text-white flex items-center justify-center text-xl shadow-lg">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <span class="text-[10px] text-violet-300 bg-violet-950 px-2.5 py-1 rounded-md">All-In-One</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-white group-hover:text-violet-300 transition-colors">StudyX</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">An integrated suite matching complex homework assignments against various community repositories.</p>
+                <div class="mt-4 text-xs text-violet-400 font-bold">
+                    Deploy Copilot &rarr;
+                </div>
+            </a>
+
+            <!-- TOOL 16: DeepL Translator -->
+            <a href="https://deepl.com" class="tool-card group relative block bg-slate-950 border border-slate-800 rounded-lg p-6 transition-all duration-300 hover:border-[#38bdf8]" data-name="deepl translator language translation dictionary global syntax">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 bg-sky-950 text-[#38bdf8] flex items-center justify-center text-lg font-bold rounded">
+                        dL
+                    </div>
+                    <span class="text-[10px] text-slate-500 font-mono">TRANSLATE</span>
+                </div>
+                <h3 class="font-space text-lg font-bold text-slate-200">DeepL Translator</h3>
+                <p class="text-xs text-slate-400 mt-1 line-clamp-2">Extremely precise context-aware document and text language interpretation engines.</p>
+                <div class="mt-4 text-xs text-[#38bdf8] font-mono">[Link Stream]</div>
+            </a>
+
+            <!-- TOOL 17: Gamma AI -->
+            <a href="https://gamma.app" class="tool-card group relative block bg-stone-900 border border-stone-800 rounded-2xl p-6 transition-all duration-300 hover:border-orange-400" data-name="gamma ai presentations documents research briefing slides notes">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-400 to-rose-500 flex items-center justify-center text-white text-xl shadow-md">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                </div>
+                <h3 class="font-space text-xl font-bold text-stone-200">Gamma AI</h3>
+                <p class="text-xs text-stone-400 mt-2 line-clamp-2">Convert your rough study notes or textbook text blocks into cleanly organized reading briefs instantly.</p>
+                <div class="mt-4 text-xs text-orange-400 font-semibold">
+                    Generate Study Deck &rarr;
+                </div>
+            </a>
+
+            <!-- TOOL 18: Consensus AI -->
+            <a href="https://consensus.app" class="tool-card group relative block bg-slate-900 shadow-lg rounded-2xl p-6 border border-slate-800 transition-all duration-300 hover:scale-[0.99] hover:border-blue-400" data-name="consensus science journals papers citations empirical research essays">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <span class="text-[9px] font-mono text-blue-400 bg-blue-950/50 px-2 py-0.5 rounded">EVIDENCE-BASED</span>
+                </div>
+                <h3 class="font-space text-xl font-bold text-slate-100">Consensus AI</h3>
+                <p class="text-xs text-slate-400 mt-2 line-clamp-2">Extract direct, empirical science evidence vectors sourced natively from peer-reviewed paper channels.</p>
+                <div class="mt-4 text-xs text-blue-400 font-bold">Query Database</div>
+            </a>
+
+        </div>
+
+        <!-- No Results Warning View -->
+        <div id="noResults" class="hidden text-center py-16">
+            <div class="text-4xl text-slate-600 mb-2"><i class="fa-regular fa-folder-open"></i></div>
+            <p class="text-slate-400 font-medium">No specialized study tools matched your search term.</p>
+        </div>
+    </main>
+
+    <!-- CINEMATIC INTERACTIVE FULLSCREEN GREETING INTERCEPTOR SCREEN -->
+    <div id="aiInterceptorScreen" class="fixed inset-0 bg-[#070c19]/95 backdrop-blur-xl z-50 flex flex-col items-center justify-center p-6 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        
+        <div class="max-w-xl w-full text-center relative z-10">
+            <!-- Interceptor Robotic Matrix Face -->
+            <div class="w-24 h-24 mx-auto mb-8 bg-slate-950 border-2 border-[#38bdf8] rounded-3xl flex items-center justify-center shadow-[0_0_30px_rgba(56,189,248,0.3)] relative">
+                <div class="w-16 h-12 rounded bg-black/90 flex flex-col items-center justify-center gap-1.5 overflow-hidden">
+                    <div class="flex gap-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#38bdf8] shadow-[0_0_10px_#38bdf8] animate-pulse"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#38bdf8] shadow-[0_0_10px_#38bdf8] animate-pulse"></span>
+                    </div>
+                    <div class="w-6 h-0.5 bg-[#38bdf8]/80 rounded-full"></div>
+                </div>
+                <!-- Micro Radar Line -->
+                <span class="absolute inset-x-0 bottom-2 h-0.5 bg-emerald-500/50 blur-[1px]"></span>
+            </div>
+
+            <!-- Interceptor Real-Time Code Text Stream Box -->
+            <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-6 min-h-[140px] text-left shadow-2xl font-mono mb-8 relative">
+                <div class="text-slate-500 text-[10px] uppercase tracking-widest border-b border-slate-900 pb-2 mb-3 flex justify-between items-center">
+                    <span>Pipeline Intercept Session</span>
+                    <span id="interceptorTargetTag" class="text-[#38bdf8] font-bold">SANDBOX</span>
+                </div>
+                <div class="text-lg text-slate-100 leading-relaxed">
+                    <span id="interceptorOutput" class="typing-cursor">Initializing neural gateway...</span>
+                </div>
+            </div>
+
+            <!-- Interaction Control Suite -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button id="skipAndRedirectBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#38bdf8] text-slate-950 font-space font-bold px-8 py-3.5 rounded-xl transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(56,189,248,0.5)] active:scale-95 cursor-pointer">
+                    <span>Enter Sandbox Now</span>
+                    <i class="fa-solid fa-arrow-right-to-bracket text-sm"></i>
+                </button>
+                <button id="cancelRedirectBtn" class="w-full sm:w-auto text-xs text-slate-400 font-mono hover:text-red-400 transition-colors px-4 py-2">
+                    [ terminate_handshake ]
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIGH-INTERACTION PLAYABLE AI MASCOT BOT COMPANION -->
+    <div id="playableMascot" class="mascot-container fixed right-6 bottom-24 md:right-8 md:bottom-8 z-50 cursor-pointer group select-none">
+        <div id="mascotChassis" class="mascot-core w-16 h-16 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-[#38bdf8] flex items-center justify-center shadow-2xl relative transition-all duration-300 group-hover:scale-110 group-hover:border-amber-400">
+            <div class="w-11 h-9 rounded bg-black/80 border border-slate-800 flex flex-col items-center justify-center relative overflow-hidden gap-1">
+                <div class="absolute inset-x-0 top-0 h-0.5 bg-[#38bdf8]/30 shadow-[0_0_8px_#38bdf8] animate-pulse"></div>
+                <div id="mascotEyes" class="flex gap-2.5 transition-transform duration-100 ease-out">
+                    <span class="w-2 h-2 rounded-full bg-[#38bdf8] shadow-[0_0_8px_#38bdf8] transition-all duration-300 group-hover:bg-amber-400 group-hover:shadow-[0_0_8px_rgba(251,191,36,1)]"></span>
+                    <span class="w-2 h-2 rounded-full bg-[#38bdf8] shadow-[0_0_8px_#38bdf8] transition-all duration-300 group-hover:bg-amber-400 group-hover:shadow-[0_0_8px_rgba(251,191,36,1)]"></span>
+                </div>
+                <div class="w-4 h-0.5 bg-[#38bdf8]/60 rounded-full transition-all duration-300 group-hover:w-6 group-hover:bg-amber-400"></div>
+            </div>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-slate-950 shadow-md">
+                <span class="absolute inset-0 bg-emerald-400 rounded-full animate-ping"></span>
+            </span>
+            <div class="absolute -left-1 w-1 h-4 bg-[#38bdf8] rounded-l opacity-60 group-hover:bg-amber-400"></div>
+            <div class="absolute -right-1 w-1 h-4 bg-[#38bdf8] rounded-r opacity-60 group-hover:bg-amber-400"></div>
+        </div>
+        <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-slate-950/95 border border-slate-800 text-white text-xs px-3 py-2 rounded-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-xl font-mono text-[#38bdf8] tracking-wide translate-x-2 group-hover:translate-x-0 pointer-events-none">
+            <i class="fa-solid fa-bolt mr-1 text-amber-400"></i> Click to command assistant
+        </span>
+    </div>
+
+    <!-- Floating Core Hub Home Navigation Button Bar -->
+    <div class="fixed bottom-6 left-0 right-0 z-40 flex justify-center pointer-events-none">
+        <a href="index.html" class="pointer-events-auto flex items-center gap-2.5 bg-slate-950/90 backdrop-blur-md border-2 border-[#38bdf8] text-white px-8 py-3.5 rounded-full font-space font-bold tracking-wide transition-all hover:bg-[#38bdf8] hover:text-slate-950 hover:shadow-[0_0_25px_rgba(56,189,248,0.6)] group shadow-xl">
+            <i class="fa-solid fa-house text-sm group-hover:scale-110 transition-transform"></i>
+            <span>HOME DECK</span>
+        </a>
+    </div>
+
+    <!-- Client-side Logic Module for Look-At Calculations and Interceptor Mechanics -->
+    <script>
+        let isTypingActive = false;
+        let typingQueue = [];
+        let currentRedirectTimeout = null;
+        let globalTargetUrl = "";
+
+        /**
+         * Simulates character-by-character text rendering inside specified DOM hooks
+         * @param {HTMLElement} element - Target text wrapper container
+         * @param {string} text - Message sequence
+         * @param {number} speed - Multiplier interval spacing
+         * @param {Function} callback - Post execution routing logic
+         */
+        function typeWriterStream(element, text, speed = 25, callback = null) {
+            element.innerHTML = '';
+            let idx = 0;
+            element.classList.add('typing-cursor');
+
+            function stream() {
+                if (idx < text.length) {
+                    element.innerHTML += text.charAt(idx);
+                    idx++;
+                    setTimeout(stream, text.charAt(idx - 1) === ' ' ? speed * 1.5 : speed);
+                } else {
+                    element.classList.remove('typing-cursor');
+                    if (callback) callback();
+                }
+            }
+            stream();
+        }
+
+        /**
+         * Standard Header Dashboard Terminal text engine layout controller
+         */
+        function executeAITerminalTyping(rawStringMessage) {
+            const terminalOutputElement = document.getElementById('aiTerminalOutput');
+            if (isTypingActive) {
+                typingQueue.push(rawStringMessage);
+                return;
+            }
+            isTypingActive = true;
+            typeWriterStream(terminalOutputElement, rawStringMessage, 20, () => {
+                isTypingActive = false;
+                if (typingQueue.length > 0) {
+                    const nextMessage = typingQueue.shift();
+                    setTimeout(() => executeAITerminalTyping(nextMessage), 400);
+                }
+            });
+        }
+
+        // Auto initialization display triggers
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                executeAITerminalTyping("Welcome to Exam Aagadi AI 👋");
+            }, 600);
+        });
+
+        /* 
+           PRE-REDIRECT INTERCEPTOR ARCHITECTURE
+           Fires full-screen streaming screen before redirecting layout actions
+        */
+        document.querySelectorAll('.tool-card').forEach(cardElement => {
+            cardElement.addEventListener('click', function(event) {
+                event.preventDefault();
+                globalTargetUrl = this.getAttribute('href');
+                const academicName = this.querySelector('h3').textContent;
+
+                // Configure tag text updates inside layout fields
+                document.getElementById('interceptorTargetTag').textContent = academicName.toUpperCase().replace(/\s+/g, '_');
+                
+                // Show fullscreen screen container gracefully
+                const interceptorScreen = document.getElementById('aiInterceptorScreen');
+                interceptorScreen.classList.remove('pointer-events-none');
+                interceptorScreen.classList.add('opacity-100');
+
+                // Generate dynamic greeting structure array
+                const outputElement = document.getElementById('interceptorOutput');
+                const combinedMessage = `I am Exam Aagadi AI 👋\nWhat do you want to study today with ${academicName}? Connecting specialized sandbox environment...`;
+
+                // Stream multi-line structure array context strings
+                typeWriterStream(outputElement, combinedMessage, 20, () => {
+                    // Automatically redirect after 1.8 seconds post typing complete loop
+                    currentRedirectTimeout = setTimeout(() => {
+                        triggerTargetRedirect();
+                    }, 1800);
+                });
+            });
+        });
+
+        // Intercept action button parameters
+        document.getElementById('skipAndRedirectBtn').addEventListener('click', () => {
+            triggerTargetRedirect();
+        });
+
+        document.getElementById('cancelRedirectBtn').addEventListener('click', () => {
+            clearTimeout(currentRedirectTimeout);
+            const interceptorScreen = document.getElementById('aiInterceptorScreen');
+            interceptorScreen.classList.add('pointer-events-none');
+            interceptorScreen.classList.remove('opacity-100');
+            executeAITerminalTyping("Session handshake safely aborted by study client.");
+        });
+
+        function triggerTargetRedirect() {
+            clearTimeout(currentRedirectTimeout);
+            const interceptorScreen = document.getElementById('aiInterceptorScreen');
+            interceptorScreen.classList.add('pointer-events-none');
+            interceptorScreen.classList.remove('opacity-100');
+            window.open(globalTargetUrl, '_blank');
+        }
+
+        /* 
+           MATHEMATICAL LOOK-AT ALGORITHMIC MATRIX FOR THE FLOATING AI MASCOT
+           Computes eye vector tracking offsets relative to coordinate movements.
+        */
+        document.addEventListener('mousemove', (mouseMoveEvent) => {
+            const eyeMatrixViewport = document.getElementById('mascotEyes');
+            const chassisBoundingBox = document.getElementById('playableMascot').getBoundingClientRect();
+            
+            const centerCoordinateX = chassisBoundingBox.left + (chassisBoundingBox.width / 2);
+            const centerCoordinateY = chassisBoundingBox.top + (chassisBoundingBox.height / 2);
+            
+            const totalDeltaX = mouseMoveEvent.clientX - centerCoordinateX;
+            const totalDeltaY = mouseMoveEvent.clientY - centerCoordinateY;
+            const vectorHypotenuse = Math.sqrt(totalDeltaX * totalDeltaX + totalDeltaY * totalDeltaY);
+            
+            const maximumOffsetLimit = 4; 
+            const transformVectorX = (totalDeltaX / vectorHypotenuse) * maximumOffsetLimit;
+            const transformVectorY = (totalDeltaY / vectorHypotenuse) * maximumOffsetLimit;
+            
+            if (eyeMatrixViewport) {
+                eyeMatrixViewport.style.transform = `translate(${transformVectorX}px, ${transformVectorY}px)`;
+            }
+        });
+
+        // Initialize click listener on Mascot for custom study prompts
+        document.getElementById('playableMascot').addEventListener('click', () => {
+            const chassis = document.getElementById('mascotChassis');
+            chassis.style.transform = 'scale(0.85) rotate(-5deg)';
+            setTimeout(() => { chassis.style.transform = ''; }, 200);
+
+            executeAITerminalTyping("Welcome to Exam Aagadi AI 👋 I am here to help you study.");
+        });
+
+        // Basic Search filtering logic mapping
+        function filterTools() {
+            const searchInput = document.getElementById('toolSearch').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.tool-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const searchTags = card.getAttribute('data-name').toLowerCase();
+                if (searchTags.includes(searchInput)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            const noResultsElement = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResultsElement.classList.remove('hidden');
+            } else {
+                noResultsElement.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
